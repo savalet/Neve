@@ -209,36 +209,6 @@
 
     {
       mode = "v";
-      key = "J";
-      action = ":m '>+1<CR>gv=gv";
-      options = {
-        silent = true;
-        desc = "Move up when line is highlighted";
-      };
-    }
-
-    {
-      mode = "v";
-      key = "K";
-      action = ":m '<-2<CR>gv=gv";
-      options = {
-        silent = true;
-        desc = "Move down when line is highlighted";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "J";
-      action = "mzJ`z";
-      options = {
-        silent = true;
-        desc = "Allow cursor to stay in the same place after appeding to current line";
-      };
-    }
-
-    {
-      mode = "v";
       key = "<";
       action = "<gv";
       options = {
@@ -273,31 +243,6 @@
       action = "<C-u>zz";
       options = {
         desc = "Allow C-d and C-u to keep the cursor in the middle";
-      };
-    }
-
-    # Remap for dealing with word wrap and adding jumps to the jumplist.
-    {
-      mode = "n";
-      key = "j";
-      action.__raw = "
-        [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']]
-      ";
-      options = {
-        expr = true;
-        desc = "Remap for dealing with word wrap and adding jumps to the jumplist.";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "k";
-      action.__raw = "
-        [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']]
-      ";
-      options = {
-        expr = true;
-        desc = "Remap for dealing with word wrap and adding jumps to the jumplist.";
       };
     }
 
